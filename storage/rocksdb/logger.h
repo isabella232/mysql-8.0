@@ -52,7 +52,7 @@ public:
     // log to MySQL
     std::string f("LibRocksDB:");
     f.append(format);
-    error_log_print(mysql_log_level, f.c_str(), ap);
+    error_log_printf(mysql_log_level, f.c_str(), ap);
   }
 
   void Logv(const char *format, va_list ap) override {

@@ -9048,7 +9048,6 @@ bool ha_notify_alter_table(THD *thd, const MDL_key *mdl_key,
   return false;
 }
 
-<<<<<<< c422417ffc0fdf7b2d8bed64ff70d8bef2bfdcfe
 const char* ha_rkey_function_to_str(enum ha_rkey_function r) {
   switch (r) {
   case HA_READ_KEY_EXACT:

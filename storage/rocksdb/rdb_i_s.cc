@@ -1541,6 +1541,7 @@ struct st_mysql_plugin rdb_i_s_cfstats = {
     "RocksDB column family stats",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_cfstats_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1557,6 +1558,7 @@ struct st_mysql_plugin rdb_i_s_dbstats = {
     "RocksDB database stats",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_dbstats_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1573,6 +1575,7 @@ struct st_mysql_plugin rdb_i_s_perf_context = {
     "RocksDB perf context stats",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_perf_context_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1589,6 +1592,7 @@ struct st_mysql_plugin rdb_i_s_perf_context_global = {
     "RocksDB perf context stats (all)",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_perf_context_global_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1605,6 +1609,7 @@ struct st_mysql_plugin rdb_i_s_cfoptions = {
     "RocksDB column family options",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_cfoptions_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1621,6 +1626,7 @@ struct st_mysql_plugin rdb_i_s_global_info = {
     "RocksDB global info",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_global_info_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1637,6 +1643,7 @@ struct st_mysql_plugin rdb_i_s_compact_stats = {
     "RocksDB compaction stats",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_compact_stats_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1653,6 +1660,7 @@ struct st_mysql_plugin rdb_i_s_ddl = {
     "RocksDB Data Dictionary",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_ddl_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1669,6 +1677,7 @@ struct st_mysql_plugin rdb_i_s_index_file_map = {
     "RocksDB index file map",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_index_file_map_init,
+    nullptr,
     rdb_i_s_deinit,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
@@ -1686,6 +1695,7 @@ struct st_mysql_plugin rdb_i_s_lock_info = {
     PLUGIN_LICENSE_GPL,
     rdb_i_s_lock_info_init,
     nullptr,
+    nullptr,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */
     nullptr, /* system variables */
@@ -1701,6 +1711,7 @@ struct st_mysql_plugin rdb_i_s_trx_info = {
     "RocksDB transaction information",
     PLUGIN_LICENSE_GPL,
     rdb_i_s_trx_info_init,
+    nullptr,
     nullptr,
     0x0001,  /* version number (0.1) */
     nullptr, /* status variables */

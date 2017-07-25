@@ -10033,7 +10033,7 @@ bool ha_rocksdb::prepare_inplace_alter_table(
   DBUG_ASSERT(added_indexes.size() == n_added_keys);
   DBUG_ASSERT(new_n_keys == (old_n_keys - n_dropped_keys + n_added_keys));
 
-  ha_alter_info->handler_ctx = new Rdb_inplace_alter_ctx(
+  ha_alter_info->handler_ctx = new (*THR_MALLOC) Rdb_inplace_alter_ctx(
       new_tdef, old_key_descr, new_key_descr, old_n_keys, new_n_keys,
       added_indexes, dropped_index_ids, n_added_keys, n_dropped_keys);
 
@@ -11313,6 +11313,7 @@ mysql_declare_plugin(rocksdb_se){
     "RocksDB storage engine",          /* Plugin Description */
     PLUGIN_LICENSE_GPL,                /* Plugin Licence */
     myrocks::rocksdb_init_func,        /* Plugin Entry Point */
+    NULL,
     myrocks::rocksdb_done_func,        /* Plugin Deinitializer */
     0x0001,                            /* version number (0.1) */
     myrocks::rocksdb_status_vars,      /* status variables */

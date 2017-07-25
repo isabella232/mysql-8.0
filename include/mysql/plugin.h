@@ -206,7 +206,6 @@ typedef int (*mysql_show_var_func)(MYSQL_THD, struct st_mysql_show_var*, char *)
 */
 
 
-<<<<<<< 2b3d9613ba904ce92f9d1b6d1f6cc644096ccaa5
 #define PLUGIN_VAR_BOOL         0x0001
 #define PLUGIN_VAR_INT          0x0002
 #define PLUGIN_VAR_LONG         0x0003
